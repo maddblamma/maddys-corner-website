@@ -2,8 +2,74 @@
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
 
-body {
-  background-color: white;
+html {
+  background-color: rgb(235, 146, 215);
   color: black;
-  font-family: Verdana;
+  margin: 0;
+  padding: 0;
+}
+
+.header{
+  padding: 20px;
+}
+
+body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow-x: hidden;
+  float: center;
+}
+
+h1 {
+  margin: 50px;
+  font-family: 'Times New Roman'
+}
+
+strong {
+  /* Danger Maddy! You're styling bold text here. */
+  color: #8f4253;
+}
+
+.navbar {
+  height: 100%;
+  width: 85%;
+  position: center;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 15px;
+  overflow-x: hidden;
+  background-color: #66225b;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.navlist {
+  float: left;
+  margin: 5px;
+}
+
+.navlink{
+  display: block;
+  color:rgb(236, 215, 225);
+  text-align: center;
+  padding: 6px 8px;
+  text-decoration: none;
+}
+
+ul
+{
+  list-style-type: none;
+  text-align: center;
+  margin-left: -45px;
+}
+
+@media screen and (max-height: 450px) {
+  .navbar {padding-top: 5px;   height: 100%;width: 75%;}
+  .navbar a {font-size: 12px;}
 }
