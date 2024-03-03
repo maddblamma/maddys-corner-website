@@ -1,0 +1,40 @@
+# Maddy, this is a workflow template for you to configure yourself.
+# It will automatically deploy the repository to Neocities!
+# Use https://github.com/marketplace/actions/deploy-to-neocities as a reference.
+# I wrote a few comments to hopefully explain things better.
+
+name: Deploy to neocities
+
+# only run on changes to main
+on:
+  push:
+    branches:
+      - main # if you push commits to another branch, i.e. a test or dev branch, the site will not update - only the main branch
+
+concurrency: # prevent concurrent deploys doing strange things
+  group: deploy-to-neocities
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    # Set up any tools and build steps here, if you know what you're doing - you honestly only need to add the API key below.
+    # This example uses a Node.js toolchain to build a site
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: lts/*
+    - name: Install deps and build
+      run: |
+        npm i
+        npm run build
+    # When the dist_dir is ready, deploy it to neocities
+    - name: Deploy to neocities
+      uses: bcomnes/deploy-to-neocities@v1
+      with:
+        api_token: ${{ secrets.NEOCITIES_API_TOKEN }} # you need to get your site's API from https://neocities.org/settings/{{your-sitename}}#api_key
+        cleanup: false
+        dist_dir: / # deploys root directory - not ideal, as .git/.github/.vscode directories don't deploy properly. we will experiment with this!
