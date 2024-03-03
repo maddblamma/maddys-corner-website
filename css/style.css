@@ -68,7 +68,7 @@ ul
   text-align: center;
   margin-left: -45px;
 }
-
+  /* Danger Maddy! This is how you're shrinking the navbar for mobile devices. */
 @media screen and (max-width: 480px) {
   .navbar {padding-top: 5px;   height: 100%;width: 75%;}
   .navbar a {font-size: 12px;}
