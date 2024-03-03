@@ -10,7 +10,7 @@ html {
   cursor: url('/cursor/diamondsword.cur'), auto;
 }
 
-.header{
+.header {
   padding: 20px;
 }
 
@@ -55,7 +55,7 @@ strong {
   margin: 5px;
 }
 
-.navlink{
+.navlink {
   display: block;
   color:rgb(236, 215, 225);
   text-align: center;
@@ -69,6 +69,12 @@ ul
   text-align: center;
   margin-left: -45px;
 }
+
+#marisa {
+  height: 100px;
+  padding: 10px;
+}
+
   /* Danger Maddy! This is how you're shrinking the navbar for mobile devices. */
 @media screen and (max-width: 480px) {
   .navbar {padding-top: 5px;   height: 100%;width: 75%;}
