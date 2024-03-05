@@ -2,36 +2,105 @@
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
 
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 html {
-  background-color: rgb(235, 146, 215);
+  background-color: rgb(209, 139, 211); /*rgb(235, 146, 215)*/
   color: black;
   margin: 0;
   padding: 0;
-  cursor: url('/cursor/diamondsword.cur'), auto
+  cursor: url('/cursor/diamondsword.cur'), auto;
+}
+
+#leftside {
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  width: 275px;
+  background-color: rgb(159, 88, 161);
+  font-family: Arial, Helvetica, sans-serif;
+  color: floralwhite;
+  list-style-type: none;
+  font-size: 25px;
+  & > img {
+    margin: 40px;
+    padding: 0;
+  }
+  & > li, & > p {
+    margin: 12.5px;
+  }
+}
+
+section {
+  text-align: center;
+  margin: 8px;
+  background-color: rgb(152, 109, 174);
+  border: outset;
+  border-color: rgb(139, 87, 187);
+  overflow-y: auto;
+  height: 320px;
+  width: 450px;
+  color: floralwhite;
+  
+  & > h1 {
+    margin: 22.5px;
+    font-size: 2em;
+  }
+  & > p {
+    margin: 0;
+    padding: 25px;
+    font-size: 20px;
+  }
 }
 
 #header {
   margin-bottom: 5px;
-  font-family: 'Times New Roman'
+  font-family: 'Times New Roman';
 }
 
 body {
-  padding: 20px;
+  /* padding: 20px; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  flex-direction: row;
+  /* align-items: center; */
+  /* text-align: center; */
   overflow-x: hidden;
-  float: center;
+  /* float: center; */
 }
 
 #marisa {
   height: 100px;
+  width: 100px;
   padding: 30px;
 }
 
-  /* Danger Maddy! This is how you're shrinking the navbar for mobile devices. */
+/* Danger Maddy! This is how you're shrinking the navbar for mobile devices. */
 @media screen and (max-width: 480px) {
-  .leftside {padding-top: 5px;   height: 100%;width: 75%;}
-  .leftside a {font-size: 12px;}
+  .leftside {
+    padding-top: 5px;
+    height: 100%;
+    width: 75%;
+  }
+  .leftside a {
+    font-size: 12px;
+  }
+}
+
+a {
+  color: floralwhite;
+}
+
+a:hover {
+  color: rgb(229, 191, 226);
 }
