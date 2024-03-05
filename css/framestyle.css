@@ -1,0 +1,40 @@
+html {
+    background-color: rgb(209, 139, 211);
+    color: black;
+    margin: 0;
+    padding: 0;
+    cursor: url('../cursor/diamondsword.cur'), pointer;
+    overflow-x: hidden;
+    flex-direction: column;
+  }
+
+  #marisa {
+    height: 100px;
+    padding-left: 25px;
+  }
+
+    /* Danger Maddy! This is how you're shrinking the navbar for mobile devices. */
+@media screen and (max-width: 480px) {
+    .navbar {padding-top: 5px;   height: 100%;width: 75%;}
+    .navbar a {font-size: 12px;}
+  }
+  
+  body {
+    background-color: rgb(152, 109, 174);
+    border:outset;
+    border-color:rgb(139, 87, 187);
+    height: 320px;
+    width: 450px;
+    color:floralwhite
+  }
+
+  h1
+  {
+    text-align: center;
+  }
+
+  p{
+    text-align: center;
+    padding: 25px;
+    font-size: 20px;
+  }
