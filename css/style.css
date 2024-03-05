@@ -18,6 +18,10 @@ html {
   cursor: url('/cursor/diamondsword.cur'), auto;
 }
 
+#maddblamma {
+  font-size: 25px;
+}
+
 #leftside {
   overflow: hidden auto;
   margin: 0;
@@ -32,12 +36,15 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   color: floralwhite;
   list-style-type: none;
-  font-size: 25px;
+  font-size: 20px;
   & > img {
     margin: 40px;
     padding: 0;
   }
-  & > li, & > p {
+  & > li {
+    margin: 12.5px;
+  }
+  & > p {
     margin: 12.5px;
   }
 }
@@ -58,7 +65,7 @@ iframe[src="/sidebar/sidebar.html"] {
 section {
   justify-self: center;
   text-align: center;
-  margin: 8px;
+  margin: 16px;
   background-color: rgb(152, 109, 174);
   border: outset;
   border-color: rgb(139, 87, 187);
@@ -109,6 +116,9 @@ body {
     font-size: 12px;
     line-break: anywhere;
   }
+  #maddblamma {
+    font-size: 16px;
+  }
 }
 
 a {
@@ -117,4 +127,10 @@ a {
 
 a:hover {
   color: rgb(229, 191, 226);
+}
+
+#pageframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
