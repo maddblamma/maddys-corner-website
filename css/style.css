@@ -19,7 +19,7 @@ html {
 }
 
 #leftside {
-  overflow-y: auto;
+  overflow: hidden auto;
   margin: 0;
   padding: 0;
   display: flex;
@@ -42,16 +42,35 @@ html {
   }
 }
 
+iframe[src="/sidebar/sidebar.html"] {
+  border: none;
+  min-width: 0;
+  width: 275px;
+}
+
+#content {
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 section {
+  justify-self: center;
   text-align: center;
   margin: 8px;
   background-color: rgb(152, 109, 174);
   border: outset;
   border-color: rgb(139, 87, 187);
-  overflow-y: auto;
-  height: 320px;
+  overflow: hidden auto;
+  min-height: 320px;
+  max-height: calc(100% - 16px);
+  height: min-content;
   width: 450px;
   color: floralwhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   
   & > h1 {
     margin: 22.5px;
@@ -85,15 +104,10 @@ body {
   padding: 30px;
 }
 
-/* Danger Maddy! This is how you're shrinking the navbar for mobile devices. */
-@media screen and (max-width: 480px) {
-  .leftside {
-    padding-top: 5px;
-    height: 100%;
-    width: 75%;
-  }
-  .leftside a {
+@media screen and (max-width: 200px) {
+  #leftside {
     font-size: 12px;
+    line-break: anywhere;
   }
 }
 
