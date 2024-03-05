@@ -2,18 +2,40 @@
 <html>
   <!--Hi, Maddy here! I'm still learning HTML and CSS but I think this is fairly clean so far, yeah? Feel free to look at the github repo for this project if you'd like to see what I did!-->
 <head>
+  <!-- HTML Metadata -->
   <meta charset="UTF-8">
-  <title>
-    Maddy's Corner - Home
-      </title>
-
-  <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <script type="text/javascript" src="../js/main.js"></script>
+  <!-- Page Title -->
+  <title>Maddy's Corner</title>
 
-    </head>
+  <!-- Search Engine Optimization  -->
+  <meta name="keywords" content="maddblamma, redskywarn, soulsign"> <!-- TODO: configure these as you please -->
+  <meta name="description" content=""> <!-- TODO: add your description here :) -->
+  
+  <!-- Discord Meta Tags -->
+  <!-- note from fangs: thanks spax lol -->
+  <meta property="og:url" content="https://maddy.lol">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Maddy's Corner">
+  <meta property="og:description" content="Maddblamma's homepage created for my online endeavors!"> <!-- TODO: actually change this as you please -->
+  <meta property="og:image" content="https://maddy.lol/images/marisa.png"> <!-- TODO: add actual image content lol -->
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="maddy.lol">
+  <meta property="twitter:url" content="https://maddy.lol">
+  <meta name="twitter:title" content="Maddy's Corner">
+  <meta name="twitter:description" content="Maddblamma's homepage created for my online endeavors!"> <!-- TODO: actually change this as you please -->
+  <meta name="twitter:image" content="https://maddy.lol/images/marisa.png"> <!-- TODO: add actual image content lol -->
+  
+  <!-- Styling -->
+  <link rel="icon" type="image/x-icon" href="maddy/put/favicon/here"> <!-- TODO: add favicon -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
 <frameset cols="275px, *" frameborder="0">
 <frame name="leftside" src="/sidebar/sidebar.html"></frame>
 <frame name="center" src="/frame/frame.html"></frame>
@@ -21,8 +43,11 @@
 
 <body>
 
-<!-- loads the Script of the Java variety-->
+<!--
+Maddy. it's actually better to load JavaScript files right before the body closes.
+It improves loading times because the browser can load the whole website before loading your JS. -fangs
+-->
 <script src="js/main.js"></script>
 
 </body>
-</html>
+</html>>
