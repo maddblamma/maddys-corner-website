@@ -6,16 +6,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+  
   <!-- Page Title -->
   <title>Maddy's Corner</title>
-
+  
   <!-- Search Engine Optimization  -->
   <meta name="keywords" content="maddblamma, redskywarn, soulsign"> <!-- TODO: configure these as you please -->
   <meta name="description" content=""> <!-- TODO: add your description here :) -->
   
   <!-- Discord Meta Tags -->
   <!-- note from fangs: thanks spax lol -->
+  <!-- note from spax: :imstuff: -->
   <meta property="og:url" content="https://maddy.lol">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Maddy's Corner">
@@ -31,23 +32,47 @@
   <meta name="twitter:image" content="https://maddy.lol/images/marisa.png"> <!-- TODO: add actual image content lol -->
   
   <!-- Styling -->
-  <link rel="icon" type="image/x-icon" href="maddy/put/favicon/here"> <!-- TODO: add favicon -->
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-
+  <link rel="icon" type="image/x-icon" href="/images/marisa.jpg"> <!-- TODO: add real favicon -->
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
-
-<frameset cols="275px, *" frameborder="0">
-<frame name="leftside" src="/sidebar/sidebar.html"></frame>
-<frame name="center" src="/frame/frame.html"></frame>
-</frameset>
-
 <body>
-
-<!--
-Maddy. it's actually better to load JavaScript files right before the body closes.
-It improves loading times because the browser can load the whole website before loading your JS. -fangs
--->
-<script src="js/main.js"></script>
-
+  <!-- frameset and frame tags are deprecated. ported to more modern tags below
+  <frameset cols="275px, *" frameborder="0">
+  <frame name="leftside" src="/sidebar/sidebar.html"></frame>
+  <frame name="center" src="/frame/frame.html"></frame>
+  </frameset>
+  -->
+  <menu id="leftside">
+    <img id="marisa" src="../images/marisa.jpg" alt="why am i so obsessed with these stupid fumos" onclick="playAudio('../sound/Squee.mp3')">
+    <p>MADDBLAMMA!</p>
+    <li class="nav">
+      <a href="../index.html" target="center">HOME</a>
+    </li>
+    <li class="nav">
+      <a href="../frame/soulsign.html" target="center">SOULSIGN</a>
+    </li>
+    <li class="nav">
+      <a href="../frame/blog.html" target="center">BLOG</a>
+    </li>
+    <li class="nav">
+      <a href="../frame/about.html" target="center">ABOUT</a>
+    </li>
+  </menu>
+  <section>
+    <h1>Hello!</h1>
+    <p>
+      This the homepage that I created for my online endeavors!
+      Admittedly I don't intend on putting a whole lot on this site at the moment,
+      but I do wish to host my comic here once it starts up! There's also a 
+      blog here if you care about my thoughts on things, and the about me section 
+      talks more about who I am in specific! Thank you for visiting!
+    </p>
+  </section>
+  <!--
+  Maddy. it's actually better to load JavaScript files right before the body closes.
+  It improves loading times because the browser can load the whole website before loading your JS. -fangs
+  plus! it ensures all of your elements are created already. -spax
+  -->
+  <!--<script src="js/main.js"></script>-->
 </body>
-</html>>
+</html>
