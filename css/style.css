@@ -31,7 +31,7 @@ html {
   text-align: center;
   align-items: center;
   height: 100%;
-  width: 275px;
+  width: 100%;
   background-color: rgb(159, 88, 161);
   font-family: Arial, Helvetica, sans-serif;
   color: floralwhite;
@@ -52,32 +52,23 @@ html {
 iframe[src="/sidebar/sidebar.html"] {
   border: none;
   min-width: 0;
-  width: 275px;
-}
-
-#content {
-  min-width: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  max-width: 275px;
 }
 
 section {
-  justify-self: center;
   text-align: center;
   margin: 16px;
   background-color: rgb(152, 109, 174);
   border: outset;
   border-color: rgb(139, 87, 187);
   overflow: hidden auto;
-  min-height: 320px;
-  max-height: calc(100% - 16px);
-  height: min-content;
-  width: 450px;
+  height: calc(100% - 32px);
+  width: calc(100% - 32px);
   color: floralwhite;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   
   & > h1 {
     margin: 22.5px;
