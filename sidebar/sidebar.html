@@ -9,22 +9,32 @@
 </head>
 <body>
   <menu id="leftside">
-    
-    <p id="maddblamma">MADDBLAMMA!</p>
-    <li class="nav">
+    <!--
+      MAJOR TODO:
+        i'm not sure how you want to stylize this, but we should
+        maybe consider creating icons for each page, so that when
+        the sidebar Does collapse, there are still little icons to
+        go to each page instead of just a blank bar. i hope that
+        makes sense! i will let you take the artistic liberties :3
+    -->
+
+    <p id="maddblamma" class="nav sidebar-text">MADDBLAMMA!</p>
+    <li class="nav sidebar-text">
       <a href="/pages/home.html" target="_parent">HOME</a>
     </li>
-    <li class="nav">
+    <li class="nav sidebar-text">
       <a href="/pages/blog.html" target="_parent">BLOG</a>
     </li>
-    <li class="nav">
+    <li class="nav sidebar-text">
       <a href="/pages/about.html" target="_parent">ABOUT</a>
     </li>
 
-    <p id="maddblamma">COMICS!</p>
-    <li class="nav">
+    <p id="comics" class="nav sidebar-text">COMICS!</p>
+    <li class="nav sidebar-text">
       <a href="/pages/soulsign.html" target="_parent">SOULSIGN</a>
     </li>
+
+    <p id="sidebar-button"><</p> <!-- Line 13 of main.js handles animation -->
 
   </menu>
   <script type="text/javascript" src="/js/main.js"></script>
