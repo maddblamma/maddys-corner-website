@@ -23,7 +23,7 @@ html {
 }
 
 #leftside {
-  overflow-y: auto;
+  overflow: hidden auto;
   margin: 0;
   padding: 0;
   display: flex;
@@ -31,7 +31,7 @@ html {
   text-align: center;
   align-items: center;
   height: 100%;
-  width: 275px;
+  width: 100%;
   background-color: rgb(159, 88, 161);
   font-family: Arial, Helvetica, sans-serif;
   color: floralwhite;
@@ -41,13 +41,16 @@ html {
     margin: 40px;
     padding: 0;
   }
-  & > li {
+  & > li, & > p {
     margin: 12.5px;
   }
-  & > p {
-    margin: 12.5px;
-    text-decoration: underline;
-  }
+}
+
+iframe[src="/sidebar/sidebar.html"] {
+  border: none;
+  min-width: 0;
+  width: 100%;
+  max-width: 275px;
 }
 
 section {
@@ -56,10 +59,13 @@ section {
   background-color: rgb(152, 109, 174);
   border: outset;
   border-color: rgb(139, 87, 187);
-  overflow-y: auto;
-  height: 94%;
-  width: 100%;
+  overflow: hidden auto;
+  height: calc(100% - 32px);
+  width: calc(100% - 32px);
   color: floralwhite;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
   
   & > h1 {
     margin: 22.5px;
@@ -93,15 +99,10 @@ body {
   padding: 30px;
 }
 
-/* Danger Maddy! This is how you're shrinking the navbar for mobile devices. */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 200px) {
   #leftside {
-    padding-top: 5px;
-    height: 100%;
-    width: 75%;
-  }
-  #leftside a {
     font-size: 12px;
+    line-break: anywhere;
   }
   #maddblamma {
     font-size: 16px;

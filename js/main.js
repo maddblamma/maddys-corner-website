@@ -7,5 +7,5 @@ init();
 
 //placeholder so it doesn't complain that init doesn't exist
 function init() {
-  console.log("running!");
+  //console.log("running!");
 }
