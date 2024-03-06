@@ -41,10 +41,7 @@ html {
     margin: 40px;
     padding: 0;
   }
-  & > li {
-    margin: 12.5px;
-  }
-  & > p {
+  & > li, & > p {
     margin: 12.5px;
   }
 }
