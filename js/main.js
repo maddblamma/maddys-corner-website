@@ -10,20 +10,19 @@ function init() {
   //console.log("running!");
 }
 
-// sidebar collapse button, pardon the terrible code
-document.getElementById('sidebar-button').addEventListener('click', function() {
-  let sideBar = document.getElementById('leftside');
+// waits for sidebar toggle to be clicked
+document.querySelector('#sidebar-button').addEventListener('click', function() {
+  // selects sidebar and toggles the 'collapse' class
+  const sideBar = document.querySelector('#leftside');
   sideBar.classList.toggle('collapse');
-  let sidebarTexts = sideBar.getElementsByClassName('sidebar-text');
-  for (let i = 0; i < sidebarTexts.length; i++) {
-    sidebarTexts[i].classList.toggle('collapse');
-  }
+  
+  // does the same but with sidebar text
+  const sidebarTexts = sideBar.querySelectorAll('.sidebar-text');
+  sidebarTexts.forEach(text => text.classList.toggle('collapse'));
 
-  // change the funny appearance of le button
-  let button = document.getElementById('sidebar-button');
-  if (sideBar.classList.contains('collapse')) {
-    button.textContent = '>'; // text when sidebar is collapsed
-  } else {
-    button.textContent = '<'; // text when sidebar is expanded, so, not collapsed
-  }
+  // changes sidebar button based on it's state!
+  // ? for collapse, : for expanded
+  const button = document.querySelector('#sidebar-button');
+  button.textContent = sideBar.classList.contains('collapse') ? '>' : '<';
+  // you wiill probably want to use icons, but the brackets work for now :)
 });
