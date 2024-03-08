@@ -26,13 +26,20 @@ html {
 
 #maddblamma {
   font-size: 27px;
-  text-decoration: underline;
+  font-weight: bold; /* you can change this, but ONLY use underlines for links! */
   color:rgb(193, 194, 168);
 }
 
+/* remember maddy, keep IDs to unique elements! */
+#comics {
+  font-size: 27px;
+  font-weight: bold; /* refer to line 29 */
+  color:rgb(193, 194, 168);
+}
 
-
+/* === SIDEBAR === */
 #leftside {
+  transition: width 0.5s ease-in-out; /* makes transition smooth */
   overflow: hidden auto;
   margin: 0;
   padding: 0;
@@ -56,6 +63,24 @@ html {
   }
 }
 
+#leftside.collapse {
+  width: 50px; /* width sidebar collapses to */
+}
+
+.sidebar-text {
+  transition: opacity 0.5s ease-in-out;
+}
+
+#sidebar-button { /* button that collapses sidebar */
+  color:rgb(193, 194, 168);
+}
+
+#leftside.collapse .sidebar-text {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* === NOT sidebar idk you can organize this lol === */
 iframe[src="/sidebar/sidebar.html"] {
   border: none;
   min-width: 0;
