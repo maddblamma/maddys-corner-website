@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "ADDSBP";
-  src: url(ADDSBP__.TTF);
+  src: url("/fonts/ADDSBP.ttf");
 }
 
 html, body {
@@ -13,7 +13,6 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  
 }
 
 html {
@@ -24,25 +23,20 @@ html {
   cursor: url('/cursor/diamondsword.cur'), auto;
 }
 
-#maddblamma {
+h2 {
   font-size: 27px;
   font-weight: bold; /* you can change this, but ONLY use underlines for links! */
-  color:rgb(193, 194, 168);
-}
-
-/* remember maddy, keep IDs to unique elements! */
-#comics {
-  font-size: 27px;
-  font-weight: bold; /* refer to line 29 */
-  color:rgb(193, 194, 168);
+  color: rgb(193, 194, 168);
 }
 
 /* === SIDEBAR === */
 #leftside {
-  transition: width 0.5s ease-in-out; /* makes transition smooth */
+  transition: width 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out; /* makes transition smooth */
   overflow: hidden auto;
   margin: 0;
   padding: 0;
+  opacity: 1;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -58,26 +52,31 @@ html {
     margin: 40px;
     padding: 0;
   }
-  & > li, & > p {
+  & > :is(li, p, #sidebar-button) {
     margin: 20px;
+  }
+  & > #sidebar-button {
+    font-size: 20px;
+  }
+  &:has(> #sidebar-button:checked) {
+    width: 50px;
+    & > :not(#sidebar-button) {
+      opacity: 0;
+    }
   }
 }
 
-#leftside.collapse {
-  width: 50px; /* width sidebar collapses to */
-}
-
-.sidebar-text {
-  transition: opacity 0.5s ease-in-out;
-}
-
 #sidebar-button { /* button that collapses sidebar */
-  color:rgb(193, 194, 168);
-}
-
-#leftside.collapse .sidebar-text {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  color: rgb(193, 194, 168);
+  visibility: hidden;
+  font-family: ADDSBP;
+  &::after {
+    visibility: visible;
+    content: "<";
+  }
+  &:checked::after {
+    content: ">";
+  }
 }
 
 /* === NOT sidebar idk you can organize this lol === */
@@ -86,6 +85,9 @@ iframe[src="/sidebar/sidebar.html"] {
   min-width: 0;
   width: 100%;
   max-width: 275px;
+  /*&:has(> #leftside > #sidebar-button:checked) { //this doesn't fucking work im so sad
+    width: 50px;
+  }*/
 }
 
 section {
@@ -157,10 +159,7 @@ body {
     font-size: 12px;
     line-break: anywhere;
   }
-  #maddblamma {
-    font-size: 16px;
-  }
-  #comics {
+  h2 {
     font-size: 16px;
   }
 }
