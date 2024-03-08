@@ -1,15 +1,8 @@
-// Placeholder file for main JavaScript
 function playAudio(url) {
   new Audio(url).play();
 }
 
-init();
-
-//placeholder so it doesn't complain that init doesn't exist
-function init() {
-  //console.log("running!");
-}
-
+/*
 // waits for sidebar toggle to be clicked
 document.querySelector('#sidebar-button').addEventListener('click', function() {
   // selects sidebar and toggles the 'collapse' class
@@ -26,3 +19,4 @@ document.querySelector('#sidebar-button').addEventListener('click', function() {
   button.textContent = sideBar.classList.contains('collapse') ? '>' : '<';
   // you wiill probably want to use icons, but the brackets work for now :)
 });
+*/
