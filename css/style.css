@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "ADDSBP";
-  src: url(ADDSBP__.TTF);
+  src: url("/fonts/ADDSBP.ttf");
 }
 
 html, body {
