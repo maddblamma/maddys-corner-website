@@ -301,9 +301,9 @@ or more specifically the center line*/
     align-items: center;
     position: fixed;
     top: 0;
-    right: -500px;
+    right: -300px;
     background: #847d9b;;
-    width: 400px;
+    width: 300px;
     height: 100%;
     padding-top: 75px;
   }
