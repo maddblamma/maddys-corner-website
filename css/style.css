@@ -30,46 +30,10 @@ html {
 
 h2 {
   font-size: 27px;
-  font-weight: bold; /* you can change this, but ONLY use underlines for links! */
+  font-weight: bold; 
   color: rgb(193, 194, 168);
 }
 
-/* 
-#leftside {
-  transition: width 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out; 
-  overflow: hidden auto;
-  margin: 0;
-  padding: 0;
-  opacity: 1;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(159, 88, 161);
-  font-family: "ADDSBP";
-  color: floralwhite;
-  list-style-type: none;
-  font-size: 20px;
-  & > img {
-    margin: 40px;
-    padding: 0;
-  }
-  & > :is(li, p, #sidebar-button) {
-    margin: 20px;
-  }
-  & > #sidebar-button {
-    font-size: 20px;
-  }
-  &:has(> #sidebar-button:checked) {
-    width: 50px;
-    & > :not(#sidebar-button) {
-      opacity: 0;
-    }
-  }
-} */
 
 .sidebar-icon {
 float: left;
@@ -77,28 +41,6 @@ height: 20px;
 width: 20px;
 margin-bottom: 32px;
 }
-
-/* 
-#sidebar-button { 
-  color: rgb(193, 194, 168);
-  visibility: hidden;
-  font-family: ADDSBP;
-  &::after {
-    visibility: visible;
-    content: "<";
-  }
-  &:checked::after {
-    content: ">";
-  }
-}
-
-
-iframe[src="/sidebar/sidebar.html"] {
-  border: none;
-  min-width: 0;
-  width: 100%;
-  max-width: 275px;
-} */
 
 section {
   text-align: center;
@@ -319,4 +261,87 @@ or more specifically the center line*/
   .menu li {
     width: 100%;
   }
+
+  .comicsdropdown .comicbtn {
+    font-size: 12px;
+    border: none;
+    outline: none;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 40px 25px;
+    line-height:1;
+    transition: .3s;
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0; 
+    width: 300px;
+    height: 100%;
+  }
+  
+  .comicdrop {
+    display: none;
+    position: absolute;
+    background-color: #aba5be;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(73, 4, 58, 0.2);
+    z-index: 3;
+    width: 300px;
+  }
+
 }
+
+/* Dropdown */
+.comicsdropdown {
+  float: left;
+  overflow: hidden;
+  
+}
+
+.comicsdropdown .comicbtn {
+  font-size: 12px;
+  border: none;
+  outline: none;
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 40px 25px;
+  line-height:1;
+  transition: 0.3s;
+  background-color: inherit;
+  font-family: inherit; 
+  margin: 0; 
+  text-align: left;
+}
+
+.navbar a:hover, .comicsdropdown:hover .comicbtn {
+  color: black;
+  background-color: #cfc ;
+}
+
+.comicdrop {
+  display: none;
+  position: absolute;
+  background-color: #aba5be;
+  min-width: 160px;
+  z-index: 3;
+  box-shadow: 0px 8px 16px 0px rgba(73, 4, 58, 0.2);
+}
+
+.comicdrop a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+
+.comicdrop a:hover {
+  background-color: #ddd;
+}
+
+.comicsdropdown:hover .comicdrop {
+  display: block;
+} 
