@@ -31,7 +31,6 @@ html {
 h2 {
   font-size: 27px;
   font-weight: bold; 
-  color: rgb(193, 194, 168);
 }
 
 
@@ -345,3 +344,9 @@ or more specifically the center line*/
 .comicsdropdown:hover .comicdrop {
   display: block;
 } 
+
+.beendoing {
+  font-size: 16px;
+    text-shadow:1px 1px 10px #dddda9;, 1px 1px 10px #ccc;
+    text-align:center;
+}
