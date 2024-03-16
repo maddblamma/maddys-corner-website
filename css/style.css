@@ -43,12 +43,7 @@ margin-bottom: 32px;
 
 section {
   text-align: center;
-  margin-right: 16px;
-  margin-left: 16px;
-  margin-top: 8px;
-  /* note: did this instead of a standard margin
-  to avoid the issue of my text gettig cut out 
-  at the bottom of the screen on mobile.*/
+  margin: 16px;
   background-color: rgb(152, 109, 174);
   border: outset;
   border-color: rgb(139, 87, 187);
@@ -59,12 +54,19 @@ section {
   display: flex;
   flex-direction: column;
   & > h1 {
-    margin: 22.5px;
+    margin: 25px;
     font-size: 2em;
   }
   & > p {
     margin: 0;
-    padding: 25px;
+    padding: 50px;
+    padding-bottom: 100px;
+    font-size: 20px;
+  }
+  & > .cwstyling {
+    margin: 0;
+    padding: 50px;
+    padding-bottom: 100px;
     font-size: 20px;
   }
 }
@@ -93,18 +95,21 @@ body {
   padding: 30px;
 }
 
-#socials {
+.socials {
   font-size: 20px;
   font-family: "ADDSBP";
 }
 
 a {
   color: floralwhite;
+  font-size: 20px;
 }
 
 a:hover {
   color: rgb(229, 191, 226);
 }
+
+
 
 /* Everything new that I tested earlier is bbelow this comment! */
 
@@ -259,6 +264,7 @@ or more specifically the center line*/
   
   section {
     height: calc(100% - 71px);
+
   }
   
   .menu li {
@@ -351,6 +357,6 @@ or more specifically the center line*/
 
 .beendoing {
   font-size: 16px;
-    text-shadow:1px 1px 10px #dddda9;, 1px 1px 10px #ccc;
-    text-align:center;
+  text-align:center;
+  padding-bottom: 100px;
 }
