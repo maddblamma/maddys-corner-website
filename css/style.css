@@ -10,6 +10,13 @@ regards to the old style we have, I'm a bit scared to fiddle with the
   src: url("/fonts/ADDSBP.ttf");
 }
 
+.pageText
+{
+padding-left: 75px;
+padding-right: 75px;
+
+}
+
 html, body {
   height: 100vh;
   max-height: 100vh;
