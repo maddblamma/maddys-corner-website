@@ -6,6 +6,6 @@ This is a personal website project of mine, dedicated to my general online prese
 
 <img src="images/marisa.png" height="200px" alt="marisa">
 
-At the moment it's just a static home page, but I intend on adding blog features, embedding my Twitch streams into it, hosting my webcomic and art on it, and so on.
+At the moment it's just a static home page, and admittedly it'll probably stay that way. 
 
 Deployed to [maddy.lol](https://maddy.lol/) via GitHub Pages!
